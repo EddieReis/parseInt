@@ -1,0 +1,34 @@
+<!Document html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+<body>
+        <script>
+        filterInt = function (value) {
+        if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value))
+        return Number(value);
+        return NaN;
+    }
+
+    console.log(filterInt('421'));
+    console.log(filterInt('-421'));
+    console.log(filterInt('+421'));
+    console.log(filterInt('Infinity'));
+    console.log(filterInt('421e+0'));
+    console.log(filterInt('421hop'));
+    console.log(filterInt('hop1.61803398875'));
+    console.log(filterInt('1.61803398875'));
+
+    /*
+    Uma função de análise mais rigorosa
+    É útil em algum momento ter uma maneira mais rigorosa para analisar valores inteiros. Expressões regulares podem ajudar.
+    */
+   // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+    </script>
+
+</body>
+</html>
+
